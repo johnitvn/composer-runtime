@@ -32,14 +32,15 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-````
+````php
 $process = new ComposerProcess('path\to\working_dir');
 $process->runDisplayOutput('install');
 ````
+
 The defaut composer and composer.phar will searched in local working directory or in system enviroment path.
 Process will throw `ComposerNotInstalledException` if composer not found. You can custom composer command if you installed compsoer but not set it in system enviroment
 
-````
+````php
 $process = new ComposerProcess('path\to\working_dir');
 $process->setCommand('php /path/to/composer.phar');
 $process->runDisplayOutput('install');
@@ -47,10 +48,13 @@ $process->runDisplayOutput('install');
 
 You have 3 options for run composer command
 
-````
-process->run($params) // Will run command whithout any output
-process->runCapture($params, array &$output) // Run command and capture output to output reference variable
-process->runDisplayOutput($params) // Run command and display output directly
+````php
+// Run command whithout any output
+process->run($params) 
+// Run command and capture output to output reference variable
+process->runCapture($params, array &$output) 
+// Run command and display output directly
+process->runDisplayOutput($params) 
 ````
 
 You can see [cli-runtime](https://github.com/johnitvn/cli-runtime) for more detail.
@@ -58,7 +62,7 @@ You can see [cli-runtime](https://github.com/johnitvn/cli-runtime) for more deta
 If you want to run composer command with multiple parameters. Let call run method with array. 
 Example
 
-````
+````php
 process->run(['install','-v']) 
 process->runCapture(['install','-v'],$output)
 $process->runDisplayOutput(['install','-v']);
