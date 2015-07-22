@@ -1,0 +1,27 @@
+{
+    "name": "johnitvn/composer-runtime",
+    "description": "Library for run composer in runtime without worrying about where it is installed",
+    "type": "library",
+    "keywords": ["composer", "runtime", "package", "command", "composer cli", "execute composer"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "John Martin",
+            "email": "john.itvn@gmail.com",
+            "homepage": "https://github.com/johnitvn?tab=repositories"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/johnitvn/composer-runtime/issues?state=open",
+        "source": "https://github.com/johnitvn/composer-runtime"
+    },
+    "require": {
+        "php": ">=5.3.2",
+        "johnitvn/cli-runtime": "1.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "johnitvn\\composerruntime\\": "src/"
+        }
+    }
+}
